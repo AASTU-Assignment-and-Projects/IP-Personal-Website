@@ -1,0 +1,342 @@
+:root {
+    color-scheme: light;
+    --forest: #1f5545;
+    --forest-dark: #173d33;
+    --ink: #26352f;
+    --muted: #68766f;
+    --copper: #b66f3e;
+    --sage: #edf2ec;
+    --line: #e2e8e1;
+    --paper: #fffefa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background: #edf1eb;
+}
+
+body {
+    position: relative;
+    max-width: 980px;
+    min-height: calc(100vh - 72px);
+    margin: 36px auto;
+    padding: 58px 68px;
+    border: 1px solid #e3e9e2;
+    border-top: 5px solid var(--forest);
+    border-radius: 18px;
+    background: var(--paper);
+    box-shadow: 0 22px 65px rgba(35, 59, 48, 0.1);
+    color: var(--ink);
+    font: 16px/1.75 system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--forest-dark);
+    line-height: 1.2;
+}
+
+h1 {
+    max-width: 18ch;
+    margin: 0 0 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 600;
+    letter-spacing: -0.055em;
+}
+
+body > p:first-of-type {
+    max-width: 64ch;
+    margin: 0 0 26px;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 30px 0 42px;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #f7f9f5;
+    color: transparent;
+}
+
+a {
+    color: var(--forest);
+    text-decoration-color: #a8bcae;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: color 160ms ease, background-color 160ms ease;
+}
+
+a:hover {
+    color: var(--copper);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #c9a16e;
+    outline-offset: 3px;
+}
+
+nav a {
+    padding: 8px 12px;
+    border-radius: 7px;
+    color: var(--forest-dark);
+    font-size: 0.93rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background: #e8efe8;
+    color: var(--forest-dark);
+}
+
+h2 {
+    margin: 42px 0 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.45rem, 3vw, 1.8rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+h2::after {
+    display: block;
+    width: 38px;
+    height: 2px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: var(--copper);
+    content: "";
+}
+
+p {
+    max-width: 72ch;
+    margin: 0 0 16px;
+}
+
+ul {
+    padding-left: 1.35rem;
+}
+
+li {
+    padding-left: 4px;
+    margin-bottom: 8px;
+}
+
+li::marker {
+    color: var(--copper);
+}
+
+dt {
+    margin-top: 16px;
+    color: var(--forest-dark);
+    font-weight: 700;
+}
+
+dd {
+    margin-left: 0;
+    color: var(--muted);
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 14px 22px;
+    border-left: 3px solid var(--copper);
+    border-radius: 0 9px 9px 0;
+    background: var(--sage);
+    color: var(--forest-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.12rem;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: white;
+}
+
+th,
+td {
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+th {
+    background: var(--sage);
+    color: var(--forest-dark);
+    font-size: 0.92rem;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--sage);
+    box-shadow: 0 12px 30px rgba(35, 59, 48, 0.12);
+}
+
+audio {
+    max-width: 100%;
+}
+
+form {
+    max-width: 640px;
+    margin-top: 20px;
+}
+
+form p {
+    margin-bottom: 18px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: var(--forest-dark);
+    font-size: 0.94rem;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #ccd7ce;
+    border-radius: 7px;
+    background: white;
+    color: var(--ink);
+    font: inherit;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--forest);
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(31, 85, 69, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin: 4px 8px 4px 0;
+    padding: 11px 17px;
+    border: 1px solid var(--forest);
+    border-radius: 7px;
+    background: var(--forest);
+    color: white;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 650;
+    cursor: pointer;
+    transition: transform 160ms ease, background-color 160ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background: var(--forest-dark);
+}
+
+button[type="reset"] {
+    border-color: var(--line);
+    background: white;
+    color: var(--ink);
+}
+
+button[type="reset"]:hover {
+    background: var(--sage);
+}
+
+hr {
+    height: 1px;
+    margin: 46px 0 20px;
+    border: 0;
+    background: var(--line);
+}
+
+footer {
+    margin-top: 52px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    body {
+        min-height: calc(100vh - 24px);
+        margin: 12px;
+        padding: 34px 24px;
+        border-radius: 13px;
+    }
+
+    nav {
+        gap: 3px;
+        margin: 24px 0 34px;
+        padding: 6px;
+    }
+
+    nav a {
+        padding: 7px 9px;
+        font-size: 0.88rem;
+    }
+
+    h2 {
+        margin-top: 34px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 28px 18px;
+    }
+
+    table {
+        font-size: 0.88rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
